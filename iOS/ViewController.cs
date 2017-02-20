@@ -16,12 +16,19 @@ namespace tryXamarin.iOS
 		{
 			base.ViewDidLoad();
 
-			// Perform any additional setup after loading the view, typically from a nib.
-			Button.AccessibilityIdentifier = "myButton";
-			Button.TouchUpInside += delegate
+			var button = new UIButton
 			{
-				var title = string.Format("{0} clicks!", count++);
-				Button.SetTitle(title, UIControlState.Normal);
+				Frame = new CoreGraphics.CGRect(50, 100, 150, 50),
+				BackgroundColor = UIColor.Red
+			};
+			button.SetTitle("Clisc Me!!!", UIControlState.Normal);
+			View.Add(button);
+
+			button.TouchUpInside += (sender, e) =>
+			{
+				SecondViewController controller = this.Storyboard.InstantiateViewController("secondController") as SecondViewController;
+				this.NavigationController.PushViewController(controller, true);
+
 			};
 		}
 
@@ -30,5 +37,8 @@ namespace tryXamarin.iOS
 			base.DidReceiveMemoryWarning();
 			// Release any cached data, images, etc that aren't in use.		
 		}
+
+
+
 	}
 }

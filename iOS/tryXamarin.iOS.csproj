@@ -104,7 +104,6 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="LaunchScreen.storyboard" />
     <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +116,10 @@
     <Compile Include="ViewController.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SecondViewController.cs" />
+    <Compile Include="SecondViewController.designer.cs">
+      <DependentUpon>SecondViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

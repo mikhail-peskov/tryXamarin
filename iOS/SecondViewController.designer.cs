@@ -7,15 +7,13 @@
 using Foundation;
 using System;
 using System.CodeDom.Compiler;
+using UIKit;
 
 namespace tryXamarin.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("SecondViewController")]
+    partial class SecondViewController
     {
-        [Outlet]
-        UIKit.UIButton Button { get; set; }
-
         void ReleaseDesignerOutlets ()
         {
         }
