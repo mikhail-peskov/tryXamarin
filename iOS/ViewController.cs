@@ -26,7 +26,7 @@ namespace tryXamarin.iOS
 
 			button.TouchUpInside += (sender, e) =>
 			{
-				SecondViewController controller = this.Storyboard.InstantiateViewController("secondController") as SecondViewController;
+				SecondViewController controller = this.Storyboard.InstantiateViewController("SecondViewController") as SecondViewController;
 				this.NavigationController.PushViewController(controller, true);
 
 			};

@@ -10,7 +10,7 @@ namespace tryXamarin.iOS
         {
         }
 
-				public override void ViewDidLoad()
+		public override void ViewDidLoad()
 		{
 			base.ViewDidLoad();
 
