@@ -22,6 +22,13 @@ namespace tryXamarin.iOS
 			button.SetTitle("Ya Ya!!!", UIControlState.Normal);
 			View.Add(button);
 
+			button.TouchUpInside += (sender, e) =>
+			{
+				
+				var untypedController = this.Storyboard.InstantiateViewController("FirstViewController");
+				this.NavigationController.PushViewController(untypedController, true);
+
+			};
 		}
     }
 }
