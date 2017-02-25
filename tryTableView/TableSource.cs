@@ -18,14 +18,22 @@ namespace tryTableView
 			return _items.Length;
 		}
 
+		public override void RowSelected(UITableView tableView, Foundation.NSIndexPath indexPath)
+		{
+			new UIAlertView("Header", _items[indexPath.Row], null, "Ok", null).Show();
+			tableView.DeselectRow(indexPath, true);
+		}
+
 		public override UITableViewCell GetCell(UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
 			var cell = tableView.DequeueReusableCell(_cellIdentifier);
 			if (null == cell)
 			{
-				cell = new UITableViewCell(UITableViewCellStyle.Default, _cellIdentifier);
+				cell = new UITableViewCell(UITableViewCellStyle.Subtitle, _cellIdentifier);
 			}
+
 			cell.TextLabel.Text = _items[indexPath.Row];
+			cell.DetailTextLabel.Text = "Subtitle" + indexPath.Row.ToString();
 			return cell;
 		}
 	}

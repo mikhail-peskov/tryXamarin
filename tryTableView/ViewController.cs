@@ -43,7 +43,7 @@ namespace tryTableView
 
 			var tableView = new UITableView
 			{
-				Frame = new CoreGraphics.CGRect(0, 0, View.Bounds.Width, View.Bounds.Height),
+				Frame = new CoreGraphics.CGRect(0, 30, View.Bounds.Width, View.Bounds.Height - 30),
 				Source = tableData
 			};
 
