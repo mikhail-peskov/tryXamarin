@@ -30,6 +30,7 @@ namespace tryXamarin.iOS
 				SecondViewController controller = untypedController as SecondViewController;
 				this.NavigationController.PushViewController(untypedController, true);
 
+				Console.WriteLine("Hello Console!!!");
 			};
 		}
 

@@ -26,7 +26,8 @@ namespace tryXamarin.iOS
 			{
 				
 				var untypedController = this.Storyboard.InstantiateViewController("FirstViewController");
-				this.NavigationController.PushViewController(untypedController, true);
+				//this.NavigationController.PushViewController(untypedController, true);
+				this.NavigationController.PopViewController(true);
 
 			};
 		}
